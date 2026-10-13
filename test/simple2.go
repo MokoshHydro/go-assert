@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	assert.Checkf(true, "Format message: %d %s", 1, "test")
+	assert.Checkf(false, "Format message: %d %s", 1, "test")
 	fmt.Println("NOT REACHED")
 }
 

@@ -9,7 +9,7 @@ import (
 var ExitCode = 255
 
 func Check(v bool, msg string) {
-	if(v) {
+	if(!v) {
 		fmt.Fprint(os.Stderr, "ASSERT FIRED: ")
 		fmt.Fprintln(os.Stderr, msg)
 		debug.PrintStack()
@@ -18,7 +18,7 @@ func Check(v bool, msg string) {
 }
 
 func Checkf(v bool, msg string, args ...interface{}) {
-	if(v) {
+	if(!v) {
 		fmt.Fprint(os.Stderr, "ASSERT FIRED: ")
 		s := fmt.Sprintf(msg, args...)
 		fmt.Fprintln(os.Stderr, s)
